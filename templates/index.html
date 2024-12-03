@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Out Temp Tahmini</title>
+    <!-- Bootstrap CSS Link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Out Temp Tahmin Et</h1>
+        <form action="/predict" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="Hi Out">Hi Out:</label>
+                    <input type="text" class="form-control" id="Hi Out" name="Hi Out" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Low Temp">Low Temp:</label>
+                    <input type="text" class="form-control" id="Low Temp" name="Low Temp" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Dew Hum">Dew Hum:</label>
+                    <input type="text" class="form-control" id="Dew Hum" name="Dew Hum" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="Wind Pt.">Wind Pt.:</label>
+                    <input type="text" class="form-control" id="Wind Pt." name="Wind Pt." required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="THW Index">THW Index:</label>
+                    <input type="text" class="form-control" id="THW Index" name="THW Index" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Rain Index">Rain Index:</label>
+                    <input type="text" class="form-control" id="Rain Index" name="Rain Index" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="Heat Bar">Heat Bar:</label>
+                    <input type="text" class="form-control" id="Heat Bar" name="Heat Bar" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="In D-D">In D-D:</label>
+                    <input type="text" class="form-control" id="In D-D" name="In D-D" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="In Temp">In Temp:</label>
+                    <input type="text" class="form-control" id="In Temp" name="In Temp" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="In Hum">In Hum:</label>
+                    <input type="text" class="form-control" id="In Hum" name="In Hum" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="In Dew">In Dew:</label>
+                    <input type="text" class="form-control" id="In Dew" name="In Dew" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Air Heat">Air Heat:</label>
+                    <input type="text" class="form-control" id="Air Heat" name="Air Heat" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="Wind EMC">Wind EMC:</label>
+                    <input type="text" class="form-control" id="Wind EMC" name="Wind EMC" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Wind Density">Wind Density:</label>
+                    <input type="text" class="form-control" id="Wind Density" name="Wind Density" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="ISS Samp">ISS Samp:</label>
+                    <input type="text" class="form-control" id="ISS Samp" name="ISS Samp" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Tahmin Et</button>
+        </form>
+
+        <h3 class="text-center mt-4">{{ prediction_text }}</h3>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js for functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
